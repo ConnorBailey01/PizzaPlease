@@ -32,5 +32,5 @@ function generateMenuItems(menuItems) {
 function renderMenuItem(title, body) {
     return `<li><h3>${title}</h3><p>${body}</p></li>`
 }
-
-generateMenuItems(24)
+const menuItems = [...entreeItems, ...appitizerItems]
+generateMenuItems(menuItems)

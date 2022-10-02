@@ -1,0 +1,25 @@
+{
+  "name": "pizza-please",
+  "version": "1.0.0",
+  "description": "This is a menu for the hit pizza joint Pizza Please",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pizza": "echo pizza is the best dude",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ConnorBailey01/PizzaPlease.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ConnorBailey01/PizzaPlease/issues"
+  },
+  "homepage": "https://github.com/ConnorBailey01/PizzaPlease#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "nodemon": "^2.0.20"
+  }
+}
