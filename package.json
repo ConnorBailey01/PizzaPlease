@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "bash ./build.bash",
-    "start": "nodemon server.js"
+    "start": "nodemon server.ts"
   },
   "repository": {
     "type": "git",
@@ -21,9 +21,12 @@
   "dependencies": {
     "express": "^4.18.1",
     "nodemon": "^2.0.20",
+    "ts-node": "^10.9.1",
     "webpack": "^5.74.0"
   },
   "devDependencies": {
+    "ts-loader": "^9.4.1",
+    "typescript": "^4.8.4",
     "webpack-cli": "^4.10.0"
   }
 }

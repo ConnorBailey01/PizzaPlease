@@ -1,4 +1,9 @@
-const entreeItems = [
+type MenuItem = {
+  title: string;
+  body: string;
+};
+
+const entreeItems: MenuItem[] = [
   {
     title: "Chocalate Pizza",
     body: "Cheese and Chocalate, best combo ever",
@@ -9,7 +14,7 @@ const entreeItems = [
   },
 ];
 
-const appitizerItems = [
+const appitizerItems: MenuItem[] = [
   {
     title: "Breadsticks",
     body: "Breadsticks, also known as grissini, grissino or dipping sticks, are generally pencil-sized sticks of crisp, dry baked bread that originated in Italy. There is also a soft-baked breadstick version popular in North America.",
@@ -22,14 +27,19 @@ const appitizerItems = [
 
 const menuItemsElement = document.getElementById("MenuItems");
 
-function generateMenuItems(menuItems) {
+function generateMenuItems(menuItems: MenuItem[]) {
   for (let i = 0; i < menuItems.length; i++) {
     const menuItem = menuItems[i];
-    menuItemsElement.innerHTML += renderMenuItem(menuItem.title, menuItem.body);
+    if (menuItemsElement) {
+      menuItemsElement.innerHTML += renderMenuItem(
+        menuItem.title,
+        menuItem.body
+      );
+    }
   }
 }
 
-function renderMenuItem(title, body) {
+function renderMenuItem(title: string, body: string) {
   return `<li><h3>${title}</h3><p>${body}</p></li>`;
 }
 const menuItems = [...entreeItems, ...appitizerItems];

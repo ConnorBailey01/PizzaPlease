@@ -3,4 +3,4 @@
 cp "public/index.html" "dist"
 cp "public/styles.css" "dist"
 
-webpack
+webpack --watch
