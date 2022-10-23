@@ -5,7 +5,7 @@
   "main": "script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "pizza": "echo pizza is the best dude",
+    "build": "bash ./build.bash",
     "start": "nodemon server.js"
   },
   "repository": {
@@ -20,6 +20,10 @@
   "homepage": "https://github.com/ConnorBailey01/PizzaPlease#readme",
   "dependencies": {
     "express": "^4.18.1",
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.20",
+    "webpack": "^5.74.0"
+  },
+  "devDependencies": {
+    "webpack-cli": "^4.10.0"
   }
 }
