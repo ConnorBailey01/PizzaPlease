@@ -5,7 +5,4 @@ echo "dist directory exists. copying html and css"
 
 cp "public/index.html" "dist"
 cp "public/styles.css" "dist"
-echo "html and css successfully copied. running webpack..."
-
-webpack
-echo "webpack completed"
+echo "html and css successfully copied." 

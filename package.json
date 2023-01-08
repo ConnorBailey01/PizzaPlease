@@ -5,7 +5,8 @@
   "main": "script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "bash ./build.bash",
+    "build": "bash ./buildStatic.bash && webpack --watch",
+    "build:prod": "bash ./buildStatic.bash && webpack",
     "start": "nodemon server.ts"
   },
   "repository": {
