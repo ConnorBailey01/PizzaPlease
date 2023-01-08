@@ -5,7 +5,7 @@ type MenuItem = {
 
 const entreeItems: MenuItem[] = [
   {
-    title: "Chocalate Pizza",
+    title: "Chocolate Pizza is great, do not listen to the last guy",
     body: "Cheese and Chocalate, best combo ever",
   },
   {
