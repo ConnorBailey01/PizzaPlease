@@ -1,17 +1,12 @@
 import React from 'react'
 import { createRoot } from 'react-dom/client'
+import App from './App'
 
 const container = document.getElementById('root')
-if (!container) throw new Error('Failed to find the root element')
+if (!container) throw new Error('Failed to find the root bro')
 
 const root = createRoot(container)
-root.render(
-  <>
-    <h1>Pizza Please</h1>
-    <ol id="MenuItems"></ol>
-    <h1>hello world</h1>
-  </>
-)
+root.render(<App />)
 
 // type MenuItem = {
 //   title: string;

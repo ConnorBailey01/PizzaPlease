@@ -7,7 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "bash ./buildStatic.bash && webpack --watch",
     "build:prod": "bash ./buildStatic.bash && webpack",
-    "start": "nodemon server.ts"
+    "start": "nodemon server.ts",
+    "format:all": "prettier --write \"{apps,src}/**/*.{js,jsx,ts,tsx,css,scss,json,yaml}\"",
+    "format:validate": "prettier --check \"{apps,src}/**/*.{js,jsx,ts,tsx,css,scss,json,yaml}\""
   },
   "repository": {
     "type": "git",
