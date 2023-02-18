@@ -7,7 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "bash ./buildStatic.bash && webpack --watch",
     "build:prod": "bash ./buildStatic.bash && webpack",
-    "start": "nodemon server.ts"
+    "start": "nodemon server.ts",
+    "format:all": "prettier --write \"{apps,src}/**/*.{js,jsx,ts,tsx,css,scss,json,yaml}\"",
+    "format:validate": "prettier --check \"{apps,src}/**/*.{js,jsx,ts,tsx,css,scss,json,yaml}\""
   },
   "repository": {
     "type": "git",
@@ -22,12 +24,23 @@
   "dependencies": {
     "express": "^4.18.1",
     "nodemon": "^2.0.20",
+    "prettier": "^2.8.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "ts-node": "^10.9.1",
     "webpack": "^5.74.0"
   },
   "devDependencies": {
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
     "ts-loader": "^9.4.1",
     "typescript": "^4.8.4",
     "webpack-cli": "^4.10.0"
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "tabWidth": 2,
+    "semi": false,
+    "singleQuote": true
   }
 }
