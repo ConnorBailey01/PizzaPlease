@@ -1,9 +1,17 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import MenuItem from './components/MenuItem'
-import { appitizerItems, entreeItems } from './fakeData/menuItems'
+import { fetchMenuItems } from './firebase/firestore/menuItems'
+import { MenuItemType } from './types/menuItem'
 
 const App = () => {
-  const menuItems = [...entreeItems, ...appitizerItems]
+  const [menuItems, setMenuItems] = useState<MenuItemType[]>([])
+  useEffect(() => {
+    fetchMenuItems().then((firestoreMenuItems) => {
+      console.log(firestoreMenuItems)
+      setMenuItems(firestoreMenuItems)
+    })
+  }, [])
+
   return (
     <>
       <h1>Pizza Please</h1>
