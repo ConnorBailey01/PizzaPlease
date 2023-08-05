@@ -7,7 +7,6 @@ const App = () => {
   const [menuItems, setMenuItems] = useState<MenuItemType[]>([])
   useEffect(() => {
     fetchMenuItems().then((firestoreMenuItems) => {
-      console.log(firestoreMenuItems)
       setMenuItems(firestoreMenuItems)
     })
   }, [])
@@ -17,7 +16,7 @@ const App = () => {
       <h1>Pizza Please</h1>
       <ol>
         {menuItems.map((menuItem) => {
-          return <MenuItem title={menuItem.title} body={menuItem.body} />
+          return <MenuItem menuItem={menuItem} />
         })}
       </ol>
     </>

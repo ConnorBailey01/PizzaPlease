@@ -1,14 +1,15 @@
 import React from 'react'
+import { MenuItemType } from '../types/menuItem'
 
 type MenuItemProps = {
-  title: string
-  body: string
+  menuItem: MenuItemType
 }
-const MenuItem = ({ title, body }: MenuItemProps) => {
+const MenuItem = ({ menuItem }: MenuItemProps) => {
   return (
     <li>
-      <h3>{title}</h3>
-      <p>{body}</p>
+      <h3>{menuItem.title}</h3>
+      <p>{menuItem.body}</p>
+      <p>{menuItem.price}</p>
     </li>
   )
 }
